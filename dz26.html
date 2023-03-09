@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dz26</title>
+</head>
+<body>
+
+<label for="input-field">
+    <input type="text" id="input-field">
+</label>
+<div id="sidebar"></div>
+
+<script>
+    const inputField = document.getElementById('input-field');
+    const sidebar = document.getElementById('sidebar');
+
+    inputField.addEventListener('focus', () => {
+        document.body.appendChild(sidebar);
+    });
+
+    inputField.addEventListener('blur', () => {
+        document.body.removeChild(sidebar);
+    });
+</script>
+
+</body>
+</html>
