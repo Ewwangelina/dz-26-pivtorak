@@ -6,22 +6,17 @@
 </head>
 <body>
 
-<label for="input-field">
-    <input type="text" id="input-field">
-</label>
-<div id="sidebar"></div>
+
+<input id="input-field" value="Enter" style="background-color: aqua; height: 40px; border: 2px; text-align: center"/>
+<div id="sidebar" style="background: bisque; height:40px; display: none"></div>
 
 <script>
-    const inputField = document.getElementById('input-field');
-    const sidebar = document.getElementById('sidebar');
-
-    inputField.addEventListener('focus', () => {
-        document.body.appendChild(sidebar);
-    });
-
-    inputField.addEventListener('blur', () => {
-        document.body.removeChild(sidebar);
-    });
+    document.getElementById('input-field').onfocus = () => {
+        document.getElementById('sidebar').style.display = 'block';
+    };
+    document.getElementById('input-field').onblur = () => {
+        document.getElementById('sidebar').style.display = 'none';
+    };
 </script>
 
 </body>
